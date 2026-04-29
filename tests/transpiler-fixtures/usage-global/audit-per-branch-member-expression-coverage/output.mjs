@@ -19,11 +19,10 @@ import "core-js/modules/es.iterator.take";
 import "core-js/modules/es.iterator.to-array";
 import "core-js/modules/es.string.iterator";
 import "core-js/modules/web.dom-collections.iterator";
-// per-branch dispatch when fallback receivers are MemberExpressions, not bare Identifiers.
-// resolveObjectName already accepts proxy-global member chains; enumerateFallbackDestructureBranches
-// must peel paren wrappers (oxc preserves) and accept MemberExpression branches so each
-// branch's deps emit independently. without the per-branch peel, only one branch's polyfill
-// reaches the file-level imports
+// per-branch dispatch when fallback receivers are member accesses, not bare identifiers.
+// The resolver accepts proxy-global member chains; the per-branch enumerator peels paren
+// wrappers and accepts member-access branches so each branch's deps emit independently
+// and every alternative contributes its polyfill to the file-level imports
 const {
   from: a
 } = cond ? globalThis.Array : globalThis.Iterator;
