@@ -40,9 +40,9 @@ const validTargets = new Set([
   'samsung',
 ]);
 
-const toLowerKeys = function (object) {
+function toLowerKeys(object) {
   return Object.fromEntries(entries(object).map(([key, value]) => [key.toLowerCase(), value]));
-};
+}
 
 // sentinel for "latest version" - higher than any real engine version, so no polyfills are injected
 const LATEST_SENTINEL = '999999';
