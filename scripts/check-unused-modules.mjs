@@ -22,8 +22,10 @@ const unusedGlobalModules = (await jsModulesFrom('packages/core-js/modules')).di
 
 log(unusedGlobalModules, 'modules');
 
-const internalModules = await jsModulesFrom('packages/core-js/internals');
-const allModules = await glob('packages/core-js?(-pure)/**/*.js');
+const [internalModules, allModules] = await Promise.all([
+  jsModulesFrom('packages/core-js/internals'),
+  glob('packages/core-js?(-pure)/**/*.js'),
+]);
 
 await Promise.all(allModules.map(async path => {
   for (const dependency of konan(await fs.readFile(path, 'utf8')).strings) {
