@@ -41,10 +41,7 @@ const validTargets = new Set([
 ]);
 
 const toLowerKeys = function (object) {
-  return entries(object).reduce((accumulator, [key, value]) => {
-    accumulator[key.toLowerCase()] = value;
-    return accumulator;
-  }, {});
+  return Object.fromEntries(entries(object).map(([key, value]) => [key.toLowerCase(), value]));
 };
 
 // sentinel for "latest version" - higher than any real engine version, so no polyfills are injected
