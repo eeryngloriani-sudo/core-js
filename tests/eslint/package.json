@@ -2,7 +2,7 @@
   "name": "tests/eslint",
   "type": "module",
   "devDependencies": {
-    "@eslint/markdown": "^8.0.1",
+    "@eslint/markdown": "^8.0.2",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.7.1",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@typescript-eslint/eslint-plugin": "^8.59.4",
@@ -20,7 +20,7 @@
     "eslint-plugin-name": "^0.0.1",
     "eslint-plugin-node-dependencies": "^2.2.0",
     "eslint-plugin-package-json": "^1.1.0",
-    "eslint-plugin-playwright": "^2.10.3",
+    "eslint-plugin-playwright": "^2.10.4",
     "eslint-plugin-promise": "^7.3.0",
     "eslint-plugin-qunit": "^8.2.6",
     "eslint-plugin-redos": "^4.5.0",
