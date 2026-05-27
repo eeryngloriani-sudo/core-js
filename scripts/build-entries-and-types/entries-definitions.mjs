@@ -3336,7 +3336,20 @@ export const features = {
     name: 'isError',
   },
   'symbol/index': {
-    modules: [/^(?:es|esnext)\.symbol\./],
+    modules: [
+      /^(?:es|esnext)\.symbol\./,
+      'es.array.iterator',
+      'es.async-iterator.async-dispose',
+      'es.date.to-primitive',
+      'es.function.has-instance',
+      'es.iterator.dispose',
+      'es.json.to-string-tag',
+      'es.math.to-string-tag',
+      'es.object.to-string',
+      'es.string.iterator',
+      'esnext.function.metadata',
+      'web.dom-collections.iterator',
+    ],
     template: $namespace,
     name: 'Symbol',
   },
@@ -3840,7 +3853,7 @@ export const proposals = {
   },
   'decorator-metadata': {
     link: 'https://github.com/tc39/proposal-decorator-metadata',
-    stage: 3,
+    stage: 2.7,
     modules: [
       'esnext.function.metadata',
       'esnext.symbol.metadata',

@@ -1069,7 +1069,6 @@ for (PATH of ['@core-js/pure', 'core-js']) {
   for (const NS of ['actual', 'full']) {
     ok(typeof load(NS, 'iterator/zip') == 'function');
     ok(typeof load(NS, 'iterator/zip-keyed') == 'function');
-    ok(load(NS, 'symbol/metadata'));
   }
 
   for (const NS of ['full']) {
@@ -1077,6 +1076,7 @@ for (PATH of ['@core-js/pure', 'core-js']) {
     const Set = load(NS, 'set');
     const WeakMap = load(NS, 'weak-map');
     const WeakSet = load(NS, 'weak-set');
+    ok(load(NS, 'symbol/metadata'));
     ok(typeof load(NS, 'array/filter-reject') == 'function');
     ok(typeof load(NS, 'array/unique-by') == 'function');
     ok(typeof load(NS, 'array/prototype/filter-reject') == 'function');

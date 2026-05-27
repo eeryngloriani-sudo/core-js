@@ -170,8 +170,8 @@ structuredClone(new Set([1, 2, 3])); // => new Set([1, 2, 3])
       - [`Math.sumPrecise`](#mathsumprecise)
     - [Stage 3 proposals](#stage-3-proposals)
       - [Joint iteration](#joint-iteration)
-      - [`Symbol.metadata` for decorators metadata proposal](#symbolmetadata-for-decorators-metadata-proposal)
     - [Stage 2.7 proposals](#stage-27-proposals)
+      - [`Symbol.metadata` for decorators metadata proposal](#symbolmetadata-for-decorators-metadata-proposal)
       - [`Iterator` chunking](#iterator-chunking)
     - [Stage 2 proposals](#stage-2-proposals)
       - [`AsyncIterator` helpers](#asynciterator-helpers)
@@ -2736,6 +2736,12 @@ Iterator.zipKeyed({
  */
 ```
 
+#### Stage 2.7 proposals[⬆](#index)
+[*CommonJS entry points:*](#commonjs-api)
+```
+core-js(-pure)/stage/2.7
+```
+
 ##### [`Symbol.metadata` for decorators metadata proposal](https://github.com/tc39/proposal-decorator-metadata)[⬆](#index)
 Modules [`esnext.symbol.metadata`](https://github.com/zloirock/core-js/blob/master/packages/core-js/modules/esnext.symbol.metadata.js) and [`esnext.function.metadata`](https://github.com/zloirock/core-js/blob/master/packages/core-js/modules/esnext.function.metadata.js).
 ```ts
@@ -2750,13 +2756,7 @@ class Function {
 [*CommonJS entry points:*](#commonjs-api)
 ```
 core-js/proposals/decorator-metadata
-core-js(-pure)/actual|full/symbol/metadata
-```
-
-#### Stage 2.7 proposals[⬆](#index)
-[*CommonJS entry points:*](#commonjs-api)
-```
-core-js(-pure)/stage/2.7
+core-js(-pure)/full/symbol/metadata
 ```
 
 ##### [`Iterator` chunking](https://github.com/tc39/proposal-iterator-chunking)[⬆](#index)
