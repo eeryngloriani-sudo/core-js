@@ -6,7 +6,7 @@
     "karma-ie-launcher": "^1.0.0",
     "karma-qunit": "^4.2.1",
     "playwright": "^1.60.0",
-    "qunit": "^2.25.0",
+    "qunit": "^2.26.0",
     "which": "^7.0.0"
   }
 }
