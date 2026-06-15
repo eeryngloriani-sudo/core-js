@@ -1,6 +1,6 @@
 // Some tests adopted from Test262 project and governed by the BSD license.
 // Copyright (c) 2012 Ecma International. All rights reserved.
-/* eslint-disable es/no-bigint,unicorn/no-hex-escape -- testing */
+/* eslint-disable es/no-bigint -- testing */
 QUnit.test('JSON.stringify', assert => {
   const { stringify } = JSON;
   const { defineProperty, keys, values } = Object;

@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/require-array-join-separator -- required for testing */
 import { TYPED_ARRAYS } from '../helpers/constants.js';
 
 QUnit.test('%TypedArrayPrototype%.join', assert => {
