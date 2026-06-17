@@ -1,6 +1,7 @@
 import { cpus } from 'node:os';
 
 const ignore = {
+  'tests/babel-plugin-v7': '*',
   'tests/observables': [
     'moon-unit',
   ],
@@ -14,7 +15,7 @@ const pkgs = await glob([
 
 async function checkPackage(path) {
   const { name = 'root', dependencies, devDependencies } = await fs.readJson(path);
-  if (!dependencies && !devDependencies) return;
+  if (ignore[name] === '*' || (!dependencies && !devDependencies)) return;
 
   const exclude = [...ignore[name] ?? []];
   for (const dep of [...Object.keys(dependencies ?? {}), ...Object.keys(devDependencies ?? {})]) {
