@@ -3,7 +3,6 @@ import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
 
 const SEMVER = /(?<major>\d+)(?:\.(?<minor>\d+))?(?:\.(?<patch>\d+))?/;
-// eslint-disable-next-line sonarjs/slow-regex -- ok
 const SEMVER_WITH_REQUIRED_MINOR_COMPONENT = /(?<major>\d+)\.(?<minor>\d+)(?:\.(?<patch>\d+))?/;
 
 class SemVer {

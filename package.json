@@ -83,7 +83,7 @@
   },
   "devDependencies": {
     "@babel/core": "^8.0.1",
-    "@babel/plugin-proposal-decorators": "^8.0.1",
+    "@babel/plugin-proposal-decorators": "^8.0.2",
     "@babel/plugin-syntax-decorators": "^8.0.1",
     "@babel/plugin-transform-arrow-functions": "^8.0.1",
     "@babel/plugin-transform-block-scoped-functions": "^8.0.1",
@@ -111,7 +111,7 @@
     "@babel/plugin-transform-parameters": "^8.0.1",
     "@babel/plugin-transform-private-methods": "^8.0.1",
     "@babel/plugin-transform-private-property-in-object": "^8.0.1",
-    "@babel/plugin-transform-regenerator": "^8.0.1",
+    "@babel/plugin-transform-regenerator": "^8.0.2",
     "@babel/plugin-transform-regexp-modifiers": "^8.0.1",
     "@babel/plugin-transform-shorthand-properties": "^8.0.1",
     "@babel/plugin-transform-spread": "^8.0.1",
