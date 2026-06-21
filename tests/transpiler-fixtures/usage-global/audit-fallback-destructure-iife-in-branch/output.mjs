@@ -17,11 +17,10 @@ import "core-js/modules/es.iterator.take";
 import "core-js/modules/es.iterator.to-array";
 import "core-js/modules/es.string.iterator";
 import "core-js/modules/web.dom-collections.iterator";
-// IIFE inside conditional branch: `cond ? (() => Array)() : Iterator`. outer is a
-// ConditionalExpression (no IIFE peel needed at top), but each branch is recursively
-// resolved through `buildDestructuringInitMeta` -- the consequent's IIFE must peel so
-// branch-level resolution recovers Array as the constructor. exercises the per-branch
-// recursion path through the new CallExpression case in the switch.
+// IIFE inside a conditional branch: `cond ? (() => Array)() : Iterator`. outer is a
+// ConditionalExpression (no peel needed at top), but each branch is resolved recursively,
+// and the consequent's IIFE must peel so branch-level resolution recovers Array as the
+// constructor. exercises the per-branch recursion through the CallExpression case.
 const {
   from
 } = cond ? (() => Array)() : Iterator;
