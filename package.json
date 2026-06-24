@@ -120,7 +120,7 @@
     "@babel/plugin-transform-unicode-regex": "^8.0.1",
     "konan": "^2.1.1",
     "npm-run-all2": "^9.0.2",
-    "semver": "^7.8.4",
+    "semver": "^7.8.5",
     "zx": "^8.8.5"
   }
 }
