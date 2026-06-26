@@ -1315,7 +1315,9 @@ d.promise.then(console.log); // => 42
 ```
 [Example](https://tinyurl.com/bde6am73) with async functions:
 ```js
-let delay = time => new Promise(resolve => setTimeout(resolve, time));
+function delay(time) {
+  return new Promise(resolve => setTimeout(resolve, time));
+}
 
 async function sleepRandom(time) {
   await delay(time * 1e3);
@@ -2776,7 +2778,9 @@ core-js(-pure)/full/iterator/windows
 ```
 [*Examples*](https://tinyurl.com/24xnkcnn)
 ```js
-const digits = () => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].values();
+function digits() {
+  return [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].values();
+}
 
 let chunks = Array.from(digits().chunks(2));  // [[0, 1], [2, 3], [4, 5], [6, 7], [8, 9]]
 
